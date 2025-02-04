@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
+        .layout-ex5 {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "left-aside main-content right-aside"
+        "low-content low-content low-content"
+        "footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr;
+      height: 100vh;
+    }
+    .layout-ex5 > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+    }
+    .header { grid-area: header; background-color: #f1c40f; }
+    .banner { grid-area: banner; background-color: #e74c3c; }
+    .left-aside { grid-area: left-aside; background-color: #2ecc71; }
+    .main-content { grid-area: main-content; background-color: #3498db; }
+    .right-aside { grid-area: right-aside; background-color: #f1c40f; }
+    .low-content { grid-area: low-content; background-color: #2ecc71; }
+    .footer { grid-area: footer; background-color: #3498db; }
+
+    @media screen and (max-width: 768px) {
+      .layout-ex5 {
+        grid-template-areas:
+          "header"
+          "banner"
+          "left-aside"
+          "main-content"
+          "right-aside"
+          "low-content"
+          "footer";
+        grid-template-columns: 1fr;
+      }
+    }
+    </style>  
+    </head>
+    <body>
+    <div class="layout-ex5">
+    <div class="header">Header</div>
+    <div class="banner">Banner</div>
+    <div class="left-aside">Left Aside</div>
+    <div class="main-content">Main Content</div>
+    <div class="right-aside">Right Aside</div>
+    <div class="low-content">Low Content</div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
